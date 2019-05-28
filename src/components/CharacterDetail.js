@@ -6,9 +6,12 @@ const CharacterDetail = ( {character} ) => {
                 <p>Select character...</p>
             )   
         }
+
         return (
-            <div className="character-detail">
-                <h2>{character.name}</h2>
+            <div className="character-detail" id={character.house}>
+                <h2>Character name:</h2>
+                <p>{character.name}</p>
+                <img className="image" alt={character.name} src={character.image}/>
             </div>
         ) 
 }

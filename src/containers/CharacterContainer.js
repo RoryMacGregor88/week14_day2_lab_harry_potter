@@ -30,7 +30,7 @@ class CharacterContainer extends Component {
     render() { 
         return ( 
             <div>
-                <h1>Character Container</h1>
+                <h1>Harry Potter Characters!</h1>
                 <CharacterSelector 
                 characters={this.state.characters}
                 onCharacterSelected={this.selectCharacter}
