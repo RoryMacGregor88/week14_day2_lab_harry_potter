@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import CharacterSelector from '../components/CharacterSelector';
+import CharacterDetail from '../components/CharacterDetail';
 
 class CharacterContainer extends Component {
     constructor(props) {
@@ -8,6 +9,8 @@ class CharacterContainer extends Component {
             characters: [],
             selectedCharacter: null
          }
+
+         this.selectCharacter = this.selectCharacter.bind(this);
     }
 
     componentDidMount() {
@@ -32,6 +35,7 @@ class CharacterContainer extends Component {
                 characters={this.state.characters}
                 onCharacterSelected={this.selectCharacter}
                 />
+                <CharacterDetail character={this.state.selectedCharacter}/>
             </div>
          );
     }

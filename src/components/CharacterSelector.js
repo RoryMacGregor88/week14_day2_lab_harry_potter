@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 
 const CharacterSelector = (props) => {
     const options = props.characters.map((character, index) => {
@@ -14,7 +14,7 @@ const CharacterSelector = (props) => {
         <select
             id="character-selector"
             defaultValue="default"
-            onChange="handleSelectChange"
+            onChange={handleSelectChange}
         >
             <option disabled value="default">Choose a character...</option>
             {options}
